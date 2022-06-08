@@ -1,0 +1,45 @@
+[package]
+name = "f2bs-api"
+version = "0.1.0"
+edition = "2021"
+authors = ["Thieu Nguyen <thieunguyen.it@gmail.com>"]
+license = "MIT"
+repository = "https://github.com/thieung/football-betting-scores"
+readme = "README.md"
+description = "Football Betting Scores API with Rust / actix-web / diesel."
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# Actix Web is a powerful, pragmatic, and extremely fast web framework for Rust
+actix-web = { version = "4.0.1" }
+
+# A safe, extensible ORM and Query Builder for PostgreSQL, SQLite, and MySQL
+diesel = { version = "1.4.8", features = ["r2d2", "postgres", "chrono", "serde_json"] }
+
+# A `dotenv` implementation for Rust
+dotenv = "0.15.0"
+
+# A library to generate and parse UUIDs.
+uuid = { version = "1.1.1", features = ["v4", "serde"] }
+
+# Create and decode JWTs in a strongly typed way.
+jsonwebtoken = { version = "8.1.0" }
+
+# A generic serialization/deserialization framework
+serde = { version = "1.0.137", features = ["derive"] }
+
+# A JSON serialization file format
+serde_json = { version = "1.0.81" }
+
+# Date and time library for Rust
+chrono = { version = "0.4.19", features = ["serde"] }
+
+# Easily hash and verify passwords using bcrypt
+bcrypt = { version = "0.13.0" }
+
+# A lightweight logging facade for Rust
+log = { version = "0.4.17" }
+
+# Cross-Origin Resource Sharing (CORS) controls for Actix Web
+actix-cors = { version = "0.6.1" }
