@@ -6,7 +6,9 @@ CREATE TABLE users (
   username TEXT NOT NULL,
   password TEXT NOT NULL,
   full_name TEXT,
+  nickname TEXT,
   active BOOLEAN NOT NULL DEFAULT 't',
+  allied BOOLEAN NOT NULL DEFAULT 'f',
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
 );

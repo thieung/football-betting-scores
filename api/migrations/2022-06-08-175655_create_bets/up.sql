@@ -1,0 +1,12 @@
+CREATE TABLE bets (
+  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  game_id UUID NOT NULL REFERENCES games (id),
+  user_id UUID NOT NULL REFERENCES users (id),
+  score_ids JSONB DEFAULT '[]'::jsonb NOT NULL,
+  amount_bet INTEGER NOT NULL DEFAULT 0,
+  amount_win INTEGER NOT NULL DEFAULT 0,
+  locked BOOLEAN NOT NULL DEFAULT 'f',
+  lasted_changed_at TIMESTAMP,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
+);
